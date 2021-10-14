@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = 3000;
+let port = process.env.PORT || 3000;
 
 app.post('/signup', (req, res) => {
   var signup_details = req.body;
